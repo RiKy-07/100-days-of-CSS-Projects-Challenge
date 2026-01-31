@@ -1,0 +1,21 @@
+{
+  "name": "100-days-of-css-projects-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RiKy-07/100-days-of-CSS-Projects-Challenge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/RiKy-07/100-days-of-CSS-Projects-Challenge/issues"
+  },
+  "homepage": "https://github.com/RiKy-07/100-days-of-CSS-Projects-Challenge#readme"
+}
