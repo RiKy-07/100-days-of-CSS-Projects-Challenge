@@ -1,0 +1,157 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #272C34;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+}
+
+.container {
+    background-color: #75CFEB;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    width: 40dvw;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    animation: disappear 3.5s linear infinite;
+}
+
+@keyframes disappear{
+    0% {
+        opacity: 0;
+    }
+
+    10%, 90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.ground {
+    background-color: #DECE6F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 64.9%;
+    width: 100%;
+    height: 50%;
+}
+
+.shadow {
+    background-color: rgba(0, 0, 0, .25);
+    /* clip-path: polygon(15% 0, 100% 20%, 85% 0); */
+    animation: shadow 3.5s linear infinite;
+
+    width: 150%;
+    height: 100%;
+}
+
+@keyframes shadow {
+    0% {
+        clip-path: polygon(15% 0, 100% 20%, 85% 0);
+    }
+    30%, 50% {
+        clip-path: polygon(15% 0, 100% 40%, 85% 0);
+    }
+    100% {
+        clip-path: polygon(15% 0, 0 50%, 84% 0);
+    }
+}
+
+.pyramid {
+    position: absolute;
+    display: flex;
+    width: 70%;
+    height: 30%;
+}
+
+.leftSide {
+    background-color: #F0F0F0;
+    clip-path: polygon(79% 0, 0 100%, 100% 100%);
+    position: absolute;
+    z-index: 1;
+
+    animation: leftShift 3.5s linear infinite;
+
+    width: 70%;
+    height: 100%;
+}
+
+@keyframes leftShift {
+    0% {
+        background-color: #C3C1C3;
+    }
+    30%, 70% {
+        background-color: #DADADA;
+    }
+    100% {
+        background-color: #919191;
+    }
+}
+
+.rightSide {
+    background-color: #C3C1C3;
+    position: absolute;
+    left: 30%;
+
+    clip-path: polygon(36% 0, 100% 100%, 21% 100%);
+
+    animation: rightShift 3.5s linear infinite;
+
+    width: 70%;
+    height: 100%;
+}
+
+@keyframes rightShift {
+    0% {
+        background-color: #919191;
+    }
+    30%, 50% {
+        background-color: #C3C1C3;
+    }
+    100% {
+        background-color: #E0E0E0;
+    }
+}
+
+.sunFund {
+    position: absolute;
+    top: 40%;
+    transform: rotate(0deg);
+    animation: sunRotate 3.5s linear infinite;
+    width: 170%;
+    height: 170%;
+}
+
+@keyframes sunRotate {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    30%, 50% {
+        transform: rotateZ(30deg);
+    }
+    100% {
+        transform: rotateZ(90deg);
+    }
+}
+
+.sun {
+    background-color: #fee401;
+    border-radius: 50%;
+    position: absolute;
+    width: 13%;
+    height: 13%;
+}
