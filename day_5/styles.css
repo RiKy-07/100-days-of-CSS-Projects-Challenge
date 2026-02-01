@@ -1,0 +1,324 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600,400);
+
+:root{
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+}
+
+body {
+    background-color: #42A7A1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+}
+
+.container {
+    background-color: white;
+    box-shadow: 1.5rem 1.5rem 3.3rem -.1rem rgba(0, 0, 0, .3);
+    position: relative;
+    aspect-ratio: 1.3/1;
+    width: 70rem;
+}
+
+/* header */
+
+.header {
+    background-color: #F1BA64;
+    color: white;
+    position: relative;
+    height: 20%;
+}
+
+.big {
+    position: absolute;
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.small {
+    position: absolute;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.title {
+    top: 25%;
+    left: 5%;
+}
+
+.date {
+    top: 55%;
+    left: 5%;
+}
+
+.type {
+    top: 30%;
+    right: 5%;
+}
+
+.value {
+    top: 50%;
+    right: 5%;
+}
+
+/* header */
+
+/* parameters */
+
+.parameter {
+    color: #606060;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 5rem;
+    height: 15%;
+}
+
+.parameter span {
+    position: relative;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    padding: 0 2rem 0 2.5rem;
+}
+
+.red::before {
+    background-color: #FA7373;
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: -5%;
+    border-radius: .3rem;
+    display: block;
+    width: 2.5rem;
+    height: 20%;
+}
+
+.blue::before {
+    background-color: #7BA2FF;
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: -5%;
+    border-radius: .3rem;
+    display: block;
+    width: 2.5rem;
+    height: 20%;
+}
+
+/* parameters */
+
+/* graphic */
+
+.graphic {
+    position: relative;
+    margin: auto;
+    width: 90%;
+    height: 55%;
+}
+
+.lineOne,
+.lineTwo,
+.lineThree {
+    background-color: #F2F2F2;
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: .3rem;
+}
+
+.lineOne {
+    top: 0;
+}
+
+.lineTwo {
+    top: 50%;
+}
+
+.lineThree {
+    top: 100%;
+}
+
+/* RED LINE */
+
+svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    line-height: 1.15;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.data.red-data polyline {
+    stroke: #FA7373;
+    stroke-width: 3;
+    stroke-linecap: round;
+    fill: none;
+}
+
+.points {
+    position: relative;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+}
+
+.point {
+    background-color: #FA7373;
+    position: absolute;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    transform: translateX(-.7rem);
+    width: 1.4rem;
+    height: 1.4rem;
+}
+
+.point.one{
+    left: 0;
+    top: 12.2rem;
+}
+
+.point.two{
+    left: 10.5rem;
+    top: 2.7rem;
+}
+
+.point.three{
+    left: 21rem;
+    top: 5.5rem;
+}
+
+.point.four{
+    left: 31.5rem;
+    top: 1.6rem;
+}
+
+.point.five{
+    left: 42rem;
+    top: 9.4rem;
+}
+
+.point.six{
+    left: 52.5rem;
+    top: 12.3rem;
+}
+
+.point.seven{
+    left: 63rem;
+    top: 2.7rem;
+}
+
+.tooltip,
+.tooltipTwo {
+    color: white;
+    font-size: 1.6rem;
+    font-weight: bold;
+    line-height: 3.5rem;
+    border-radius: .5rem;
+    position: absolute;
+    left: 50%;
+    bottom: 1.3rem;
+    display: grid;
+    place-items: top;
+    padding: 0 .6rem 1rem .6rem;
+    visibility: hidden;
+    opacity: 0;
+    transition: .4s ease-out;
+    transform: translate3d(-50%, 0, 0);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 70% 75%, 50% 100%, 30% 75%, 0% 75%);
+}
+
+.tooltip {
+    background-color: #FA7373;
+}
+
+.point:hover .tooltip {
+    visibility: visible;
+    bottom: 3rem;
+    opacity: 1;
+}
+
+/* RED LINE */
+
+/* BLUE LINE */
+
+.point.second{
+    background-color: #7BA2FF;
+}
+
+.data.blue-data polyline{
+    stroke: #7BA2FF;
+    stroke-width: 3;
+    stroke-linecap: round;
+    fill: none;
+}
+
+.point.one.second {
+    top: 19.5rem;
+}
+
+.point.two.second {
+    top: 14.5rem;
+}
+
+.point.three.second {
+    top: 17.2rem;
+}
+
+.point.four.second {
+    top: 13.4rem;
+}
+
+.point.five.second {
+    top: 15.4rem;
+}
+
+.point.six.second {
+    top: 19.4rem;
+}
+
+.point.seven.second {
+    top: 17.4rem;
+}
+
+.tooltipTwo {
+    background-color: #7BA2FF;
+}
+
+.point:hover .tooltipTwo {
+    visibility: visible;
+    bottom: 3rem;
+    opacity: 1;
+}
+
+/* BLUE LINE */
+
+/* DAYS */
+
+.days {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.day {
+    color: #949494;
+    font-size: 1.5rem;
+    line-height: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+    float: left;
+    display: block;
+}
