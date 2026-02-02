@@ -1,0 +1,291 @@
+:root {
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+    display: grid;
+    place-items: center;
+    width: 100dvw;
+    height: 100dvh;
+}
+
+.container {
+    background-color: black;
+    filter: contrast(25);
+    display: grid;
+    place-items: center;
+    position: absolute;
+    width: 40rem;
+    height: 40rem;
+}
+
+.center {
+    position: absolute;
+}
+
+/* Internal Circles */
+
+.ball {
+    background-color: white;
+    filter: blur(1.5rem);
+    border-radius: 50%;
+    position: absolute;
+    width: 9rem;
+    height: 9rem;
+}
+
+.ballOne,
+.ballTwo,
+.ballThree,
+.ballFour,
+.ballFive,
+.ballSix,
+.ballSeven,
+.ballEight {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    width: 5rem;
+    height: 5rem;
+
+    &::after {
+        background-color: white;
+        filter: blur(.5rem);
+        border-radius: 50%;
+        position: absolute;
+        content: '';
+        display: block;
+        width: 5rem;
+        height: 5rem;
+    }
+}
+
+.ballOne {
+    transform: rotate(123deg);
+    &::after {
+        transform-origin: 3.7rem 3.7rem;
+        animation: rotate 2.7s ease-in-out .2s infinite;
+    }
+}
+
+.ballTwo {
+    transform: rotate(8deg);
+    &::after {
+        transform-origin: 3.4rem 3.4rem;
+        animation: rotate 2.9s ease-in-out .4s infinite;
+    }
+}
+
+.ballThree {
+    transform: rotate(192deg);
+    &::after {
+        transform-origin: 3.1rem 3.1rem;
+        animation: rotate 3.1s ease-in-out .6s infinite;
+    }
+}
+
+.ballFour {
+    transform: rotate(170deg);
+    &::after {
+        transform-origin: 2.8rem 2.8rem;
+        animation: rotate 3.3s ease-in-out .8s infinite;
+    }
+}
+
+.ballFive {
+    transform: rotate(93deg);
+    &::after {
+        transform-origin: 2.5rem 2.5rem;
+        animation: rotate 3.5s ease-in-out 1s infinite;
+    }
+}
+
+.ballSix {
+    transform: rotate(38deg);
+    &::after {
+        transform-origin: 2.2rem 2.2rem;
+        animation: rotate 3.7s ease-in-out 1.2s infinite;
+    }
+}
+
+.ballSeven {
+    transform: rotate(141deg);
+    &::after {
+        transform-origin: 1.9rem 1.9rem;
+        animation: rotate 3.9s ease-in-out 1.4s infinite;
+    }
+}
+
+.ballEight {
+    transform: rotate(58deg);
+    &::after {
+        transform-origin: 1.6rem 1.6rem;
+        animation: rotate 4.1s ease-in-out 1.6s infinite;
+    }
+}
+
+/* Internal Circles */
+
+/* External Circles */
+
+.circleOne,
+.circleTwo,
+.circleThree,
+.circleFour,
+.circleFive,
+.circleSix,
+.circleSeven,
+.circleEight,
+.circleNine,
+.circleTen {
+    position: absolute;
+    top: 3.8rem;
+    left: 3.8rem;
+
+    &::after {
+        background-color: white;
+        filter: blur(.3rem);
+        border-radius: 50%;
+        position: absolute;
+        content: '';
+        transform-origin: 5.8rem 5.8rem;
+    }
+}
+
+.circleOne {
+    transform: rotate(114deg);
+    width: .8rem;
+    height: .8rem;
+    &::after {
+        transform-origin: 5.8rem 5.8rem;
+        animation: rotate 3.7s ease-in-out .2s infinite;
+        width: .8rem;
+        height: .8rem;
+    }
+}
+
+.circleTwo {
+    transform: rotate(280deg);
+    width: .9rem;
+    height: .9rem;
+    &::after {
+        transform-origin: 5.6rem 5.6rem;
+        animation: rotate 3.9s ease-in-out .4s infinite;
+        width: .9rem;
+        height: .9rem;
+    }
+}
+
+.circleThree {
+    transform: rotate(293deg);
+    width: 1rem;
+    height: 1rem;
+    &::after {
+        transform-origin: 5.4rem 5.4rem;
+        animation: rotate 4.1s ease-in-out .6s infinite;
+        width: 1rem;
+        height: 1rem;
+    }
+}
+
+.circleFour {
+    transform: rotate(264deg);
+    width: 1.1rem;
+    height: 1.1rem;
+    &::after {
+        transform-origin: 5.2rem 5.2rem;
+        animation: rotate 4.3s ease-in-out .8s infinite;
+        width: 1.1rem;
+        height: 1.1rem;
+    }
+}
+
+.circleFive {
+    transform: rotate(300deg);
+    width: 1.2rem;
+    height: 1.2rem;
+    &::after {
+        transform-origin: 5rem 5rem;
+        animation: rotate 4.5s ease-in-out 1s infinite;
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+}
+
+.circleSix {
+    transform: rotate(138deg);
+    width: 1.3rem;
+    height: 1.3rem;
+    &::after {
+        transform-origin: 4.8rem 4.8rem;
+        animation: rotate 4.7s ease-in-out 1.2s infinite;
+        width: 1.3rem;
+        height: 1.3rem;
+    }
+}
+
+.circleSeven {
+    transform: rotate(18deg);
+    width: 1.4rem;
+    height: 1.4rem;
+    &::after {
+        transform-origin: 4.6rem 4.6rem;
+        animation: rotate 4.9s ease-in-out 1.4s infinite;
+        width: 1.4rem;
+        height: 1.4rem;
+    }
+}
+
+.circleEight {
+    transform: rotate(36deg);
+    width: 1.5rem;
+    height: 1.5rem;
+    &::after {
+        transform-origin: 4.4rem 4.4rem;
+        animation: rotate 5.1s ease-in-out 1.6s infinite;
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}
+
+.circleNine {
+    transform: rotate(17deg);
+    width: 1.6rem;
+    height: 1.6rem;
+    &::after {
+        transform-origin: 4.2rem 4.2rem;
+        animation: rotate 5.3s ease-in-out 1.8s infinite;
+        width: 1.6rem;
+        height: 1.6rem;
+    }
+}
+
+.circleTen {
+    transform: rotate(177deg);
+    width: 1.7rem;
+    height: 1.7rem;
+    &::after {
+        transform-origin: 4rem 4rem;
+        animation: rotate 5.5s ease-in-out 2s infinite;
+        width: 1.7rem;
+        height: 1.7rem;
+    }
+}
+
+/* External Circles */
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+
+    to {
+        transform: rotate(360deg) translate3d(0, 0, 0);
+    }
+}
