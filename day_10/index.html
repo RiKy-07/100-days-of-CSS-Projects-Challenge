@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Day 10</title>
+</head>
+<body>
+    <div class="container">
+        <div class="watch">
+            <div class="watch-content">
+                <div class="date">
+                    <p id="date"></p>
+                </div>
+                <div class="time">
+                    <h1 id="time">18:00</h1>
+                </div>
+                <div class="health">
+                    <div class="heart-rate">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                        </svg>
+                        <p>81</p>
+                    </div>
+                    <div class="energy-spent">
+                        <p>1240 KCAL</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/@js-temporal/polyfill/dist/index.umd.js"></script>
+    <script src="./scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,195 @@
+:root {
+    font-size: 62.5%;
+    --background-color: #4C4C4C;
+    --circle-border-color: rgb(58, 58, 58);
+    --circle-background-color: #242424;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+}
+
+.container {
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50rem;
+    height: 50rem;
+}
+
+.watch {
+    background-color: var(--circle-background-color);
+    border: 1rem solid var(--circle-border-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 30rem;
+    height: 30rem;
+
+    &::before{
+        position: absolute;
+        content: '';
+        background: conic-gradient(#F85B5B 1deg, var(--circle-background-color) 0deg );
+        border-radius: 50%;
+        width: 28rem;
+        height: 28rem;
+        z-index: 1;
+        animation: spinner 1s linear infinite;
+    }
+    &::after {
+        position: absolute;
+        content: '';
+        background-color: #242424;
+        border-radius: 50%;
+        width: 26rem;
+        height: 26rem;
+        z-index: 2;
+    }
+}
+
+@keyframes spinner {
+    0% {
+        background: conic-gradient(#F85B5B 0deg, var(--circle-background-color) 0deg );
+    }
+    5% {
+        background: conic-gradient(#F85B5B 18deg, var(--circle-background-color) 0deg );
+    }
+    10% {
+        background: conic-gradient(#F85B5B 36deg, var(--circle-background-color) 0deg );
+        
+    }
+    15% {
+        background: conic-gradient(#F85B5B 54deg, var(--circle-background-color) 0deg );
+    }
+    20% {
+        background: conic-gradient(#F85B5B 72deg, var(--circle-background-color) 0deg);  
+    }
+    25% {
+        background: conic-gradient(#F85B5B 90deg, var(--circle-background-color) 0deg );
+    }
+    30% {
+        background: conic-gradient(#F85B5B 108deg, var(--circle-background-color) 0deg );
+    }
+    35% {
+        background: conic-gradient(#F85B5B 126deg, var(--circle-background-color) 0deg );
+    }
+    40% {
+        background: conic-gradient(#F85B5B 144deg, var(--circle-background-color) 0deg );
+    }
+    45% {
+        background: conic-gradient(#F85B5B 162deg, var(--circle-background-color) 0deg );
+    }
+    50% {
+        background: conic-gradient(#F85B5B 180deg, var(--circle-background-color) 0deg );
+    }
+    55% {
+        background: conic-gradient(#F85B5B 198deg, var(--circle-background-color) 0deg );
+    }
+    60% {
+        background: conic-gradient(#F85B5B 216deg, var(--circle-background-color) 0deg );
+    }
+    65% {
+        background: conic-gradient(#F85B5B 234deg, var(--circle-background-color) 0deg );
+    }
+    70% {
+        background: conic-gradient(#F85B5B 252deg, var(--circle-background-color) 0deg );
+    }
+    75% {
+        background: conic-gradient(#F85B5B 270deg, var(--circle-background-color) 0deg );
+    }
+    80% {
+        background: conic-gradient(#F85B5B 288deg, var(--circle-background-color) 0deg );
+    }
+    85% {
+        background: conic-gradient(#F85B5B 306deg, var(--circle-background-color) 0deg );
+    }
+    90% {
+        background: conic-gradient(#F85B5B 324deg, var(--circle-background-color) 0deg );
+    }
+    95% {
+        background: conic-gradient(#F85B5B 342deg, var(--circle-background-color) 0deg );
+    }
+    100% {
+        background: conic-gradient(#F85B5B 360deg, var(--circle-background-color) 0deg );
+    }
+}
+
+.watch-content {
+    position: absolute;
+    z-index: 3;
+    border: 1rem dotted white;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    width: 23rem;
+    height: 23rem;
+}
+
+.date {
+    p{
+        color: white;
+        font-size: 1.6rem;
+        text-transform: uppercase;
+    }
+}
+
+.time {
+    h1 {
+        color: white;
+        font-size: 4.8rem;
+    }
+}
+
+.health {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+}
+
+.heart-rate {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    svg {
+        fill: #F85B5B;
+        animation: heartbeat .5s linear infinite;
+    }
+    p {
+        color: white;
+        font-size: 1.3rem;
+        font-weight: 600;
+    }
+}
+
+.energy-spent {
+    p {
+        color: white;
+        font-size: 1.3rem;
+        font-weight: 600;
+    }
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
